@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tennix</title>
+     <style>
+       body 
+       {
+         margin: 0; 
+         background-color: #000000; /* Black hex code */
+        color: #ffffff; /* White text color for readability */
+       }
+       #foul-message {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        color: red;
+        font-size: 5em;
+        font-weight: bold;
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        opacity: 0;
+        transition: all 0.5s ease;
+        pointer-events: none;
+        z-index: 9999;
+}
+#foul-message.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+    </style>
+</head>
+<body>
+  <div id="foul-message">Foul!</div>
+ <script type="module" src="./js/logic.js"></script>
+</body>
+</html>
