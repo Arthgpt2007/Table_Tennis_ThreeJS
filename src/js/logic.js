@@ -311,7 +311,7 @@ import RAPIER from '@dimforge/rapier3d-compat';
   // Keyboard Movement 
 
   const movement = { forward: false, backward: false, left: false, right: false };
-  const speed = 0.1;
+  const speed = 0.08;
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'w' || e.key === 'ArrowUp') movement.forward = true;
@@ -460,9 +460,9 @@ import RAPIER from '@dimforge/rapier3d-compat';
     if (e.key.toLowerCase() === 'r') {
 
       // Reset ball’s position slightly above the table
-      ballBody.setTranslation({ x: 0, y: 2.5, z: 2.5 }, true);
+      ballBody.setTranslation({ x: 0, y: 2.5, z: TABLE_HALF_LENGTH- 0.3 }, true);
       ballBody.setLinvel({ x: 0, y: 0, z: 0 }, true);
-      ballBody.setAngvel({ x: 0, y: 0, z: 0 }, true);
+     // ballBody.setAngvel({ x: 0, y: 0, z: 0 }, true);
     }
   });
 
@@ -620,7 +620,8 @@ import RAPIER from '@dimforge/rapier3d-compat';
     world.step();
 
     const resetCooldown = 2000;
-    
+
+    //Ball Position and reset being checked every frame
     const t = ballBody.translation();
     const r = ballBody.rotation();
     ballMesh.position.set(t.x, t.y, t.z);
