@@ -311,7 +311,7 @@ import RAPIER from '@dimforge/rapier3d-compat';
   // Keyboard Movement 
 
   const movement = { forward: false, backward: false, left: false, right: false };
-  const speed = 0.08;
+  const speed = 0.15;
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'w' || e.key === 'ArrowUp') movement.forward = true;
