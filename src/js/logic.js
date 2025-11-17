@@ -37,8 +37,8 @@ import RAPIER from '@dimforge/rapier3d-compat';
 
   // Camera
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(0, 3.5, 5);
-  camera.lookAt(0, 0.5, 0);
+  camera.position.set(0, 3.5, 4);
+  camera.lookAt(0, 1, 0);
 
   // Lighting
 
