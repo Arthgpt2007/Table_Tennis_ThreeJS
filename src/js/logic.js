@@ -311,7 +311,7 @@ import RAPIER from '@dimforge/rapier3d-compat';
   // Keyboard Movement 
 
   const movement = { forward: false, backward: false, left: false, right: false };
-  const speed = 0.15;
+  const speed = 0.07;
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'w' || e.key === 'ArrowUp') movement.forward = true;
@@ -490,9 +490,9 @@ import RAPIER from '@dimforge/rapier3d-compat';
     const dirY = dy / length;
 
     // Forward power always sends the ball to opponent side
-    const forwardPower = 0.8;
+    const forwardPower = 0.4;
     const upwardPower = 1.2;
-    const sidePower = dirX * 1.2;
+    const sidePower = dirX * 0.8;
 
     const impulse = {
       x: sidePower,
@@ -533,7 +533,7 @@ import RAPIER from '@dimforge/rapier3d-compat';
       const normalZ = 1;
       const dot = vel.z * normalZ;
       let rz = vel.z - 2 * dot * normalZ;
-      rz = Math.abs(rz) * 0.85;
+      rz = Math.abs(rz) * 0.55;
 
 
       let sidePower = vel.x * 1.8;
